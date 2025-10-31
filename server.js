@@ -84,8 +84,9 @@ ${message}
       message: "Message saved",
       data: {
         text: newMessage.text,
-        aiResponse: response.content[0]?.text || "No response generated",
-      },
+        // aiResponse: response.content[0]?.text || "No response generated",
+        aiResponse: response.content,
+      }
     });
   } catch (error) {
     console.error("Error saving message or generating response:", error);
